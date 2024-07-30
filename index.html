@@ -4,55 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Experience Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <form id="surveyForm" method="POST">
-        <label for="fullname">Fullname:</label>
-        <input type="text" id="fullname" name="fullname" required>
-        <br><br>
+<body class="bg-gray-100 p-5">
+    <form id="surveyForm" method="POST" class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md">
+        <div class="mb-4">
+            <label for="fullname" class="block text-gray-700 text-sm font-bold mb-2">Fullname:</label>
+            <input type="text" id="fullname" name="fullname" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br><br>
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+            <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </div>
 
-        <label>On a scale of 1 to 5, how important is the integration of cultural elements to your overall gaming experience?</label><br>
-        <input type="radio" id="culture1" name="culture" value="1"><label for="culture1">1</label>
-        <input type="radio" id="culture2" name="culture" value="2"><label for="culture2">2</label>
-        <input type="radio" id="culture3" name="culture" value="3"><label for="culture3">3</label>
-        <input type="radio" id="culture4" name="culture" value="4"><label for="culture4">4</label>
-        <input type="radio" id="culture5" name="culture" value="5"><label for="culture5">5</label>
-        <br><br>
+        <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2">On a scale of 1 to 5, how important is the integration of cultural elements to your overall gaming experience?</label>
+            <div class="mt-2">
+                <label class="inline-flex items-center">
+                    <input type="radio" class="form-radio" name="culture" value="1">
+                    <span class="ml-2">1</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="culture" value="2">
+                    <span class="ml-2">2</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="culture" value="3">
+                    <span class="ml-2">3</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="culture" value="4">
+                    <span class="ml-2">4</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="culture" value="5">
+                    <span class="ml-2">5</span>
+                </label>
+            </div>
+        </div>
 
-        <label>How many hours per week do you typically spend playing artistic platform games like Limbo or Ori and the Blind Forest?</label><br>
-        <input type="radio" id="newGame1" name="hours" value="1-2"><label for="newGame1">1-2</label>
-        <input type="radio" id="newGame2" name="hours" value="2-3"><label for="newGame2">2-3</label>
-        <input type="radio" id="newGame3" name="hours" value="3-4"><label for="newGame3">3-4</label>
-        <input type="radio" id="newGame4" name="hours" value="4-5"><label for="newGame4">4-5</label>
-        <input type="radio" id="newGame5" name="hours" value="5-6"><label for="newGame5">5-6</label>
-        <br><br>
+        <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2">How many hours per week do you typically spend playing artistic platform games like Limbo or Ori and the Blind Forest?</label>
+            <div class="mt-2">
+                <label class="inline-flex items-center">
+                    <input type="radio" class="form-radio" name="hours" value="1-2">
+                    <span class="ml-2">1-2 hours</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="hours" value="2-3">
+                    <span class="ml-2">2-3 hours</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="hours" value="3-4">
+                    <span class="ml-2">3-4 hours</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="hours" value="4-5">
+                    <span class="ml-2">4-5 hours</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="hours" value="5-6">
+                    <span class="ml-2">5-6 hours</span>
+                </label>
+            </div>
+        </div>
 
-        <label>On a scale of 1 to 5, how likely are you to try a new game because it features unique cultural themes?</label><br>
-        <input type="radio" id="newGame1" name="newGame" value="1"><label for="newGame1">1</label>
-        <input type="radio" id="newGame2" name="newGame" value="2"><label for="newGame2">2</label>
-        <input type="radio" id="newGame3" name="newGame" value="3"><label for="newGame3">3</label>
-        <input type="radio" id="newGame4" name="newGame" value="4"><label for="newGame4">4</label>
-        <input type="radio" id="newGame5" name="newGame" value="5"><label for="newGame5">5</label>
-        <br><br>
+        <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2">On a scale of 1 to 5, how likely are you to try a new game because it features unique cultural themes?</label>
+            <div class="mt-2">
+                <label class="inline-flex items-center">
+                    <input type="radio" class="form-radio" name="newGame" value="1">
+                    <span class="ml-2">1</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="newGame" value="2">
+                    <span class="ml-2">2</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="newGame" value="3">
+                    <span class="ml-2">3</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="newGame" value="4">
+                    <span class="ml-2">4</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="newGame" value="5">
+                    <span class="ml-2">5</span>
+                </label>
+            </div>
+        </div>
 
-        <label>How often do you engage with games that feature real-world cultures?</label><br>
-        <input type="radio" id="engageNever" name="engage" value="Never"><label for="engageNever">Never</label>
-        <input type="radio" id="engageRarely" name="engage" value="Rarely"><label for="engageRarely">Rarely</label>
-        <input type="radio" id="engageSometimes" name="engage" value="Sometimes"><label for="engageSometimes">Sometimes</label>
-        <input type="radio" id="engageOften" name="engage" value="Often"><label for="engageOften">Often</label>
-        <input type="radio" id="engageAlways" name="engage" value="Always"><label for="engageAlways">Always</label>
-        <br><br>
+        <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2">How often do you engage with games that feature real-world cultures?</label>
+            <div class="mt-2">
+                <label class="inline-flex items-center">
+                    <input type="radio" class="form-radio" name="engage" value="Never">
+                    <span class="ml-2">Never</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="engage" value="Rarely">
+                    <span class="ml-2">Rarely</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="engage" value="Sometimes">
+                    <span class="ml-2">Sometimes</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="engage" value="Often">
+                    <span class="ml-2">Often</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="engage" value="Always">
+                    <span class="ml-2">Always</span>
+                </label>
+            </div>
+        </div>
 
-        <label>Does having full functionality when playing the game including: running, standing still, dying, jumping, etc. affect your experience during the game?</label><br>
-        <input type="radio" id="functionalityYes" name="functionality" value="Yes"><label for="functionalityYes">Yes</label>
-        <input type="radio" id="functionalityNo" name="functionality" value="No"><label for="functionalityNo">No</label>
-        <br><br>
+        <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2">Does having full functionality when playing the game including: running, standing still, dying, jumping, etc. affect your experience during the game?</label>
+            <div class="mt-2">
+                <label class="inline-flex items-center">
+                    <input type="radio" class="form-radio" name="functionality" value="Yes">
+                    <span class="ml-2">Yes</span>
+                </label>
+                <label class="inline-flex items-center ml-6">
+                    <input type="radio" class="form-radio" name="functionality" value="No">
+                    <span class="ml-2">No</span>
+                </label>
+            </div>
+        </div>
 
-        <input type="submit" value="Submit">
+        <div class="flex items-center justify-between">
+            <input type="submit" value="Submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        </div>
     </form>
 
     <script>
